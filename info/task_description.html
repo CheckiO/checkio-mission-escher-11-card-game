@@ -1,0 +1,59 @@
+<!-- Describe task in general -->
+
+<img class="for_info_only half" src="{{MEDIA}}cards.png" style="float:left;max-height: 400px">
+
+<div class="story for_info_only">
+It seems that the Hypercube affects this place in a very strange way - for example, it’s not letting the two spirits of treasure hunters to rest in peace until they figure out who between the two of them is a winner of some weird game. Hm, what would've happened if you’d refused to finish an already started game?..<br>
+<br>
+Nevertheless, you’ve had neither the time nor the inclination to think about that and you went further. In less than a few minutes you saw something you’d rather not see - a real god damn ghost! Judging by the similarity between the ghost and the portrait of a man hanging in a recently visited room, it’s safe to assume that this is the Lord Escher himself. It has become increasingly clear why none of the treasure hunters returned from the island for so many years. There’s no going back now, so it seems like you’ll have to come to an agreement with him one way or the other.<br>
+<br>
+"Only the one who can tell the truth from a lie will pass!". These were the first words the ghost said, when he saw you. He pointed to a lying on the floor set of double-sided cards which had the numbers written on them. Maybe these cards also belonged to one of the previous visitors of the castle, and then Lord Escher just decided to use them as a tryout for the seekers? Well, it doesn’t matter now. In order to pass you need to determine whether among the several first cards there are the ones that doesn’t belong.
+</div>
+
+<p>
+The numbers on the cards are written according to the following principle: the first card has  0 and 1, the second - 1 and 2, ..., the n-th - (n-1) and n. The cards in this set are shuffled chaotically.<br>
+<br>
+As input your function receives the total number of cards and a list of numbers which have been seen on the alternately taken N cards, noting that you are looking only at the front side of the card. Your task is to determine whether the cards that you’ve seen are a part of this set or the cards from some other deck have accidentally got mixed up. Depending on the answer, return True (if all the viewed cards can be encountered only within one deck) or False (if otherwise).
+
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input: </strong> Deck size, list of the picked cards.
+</p>
+
+<p>
+    <strong>Output: </strong> True or False.
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Example:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+cards([5, [2, 0, 1, 2]]) == False
+cards([10, [9, 9, 6, 6]]) == True
+</pre>
+{% else %}
+<pre class="brush: python">
+cards([5, [2, 0, 1, 2]]) == False
+cards([10, [9, 9, 6, 6]]) == True
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    For the game analisys.
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>Precondition</strong>:<br>
+    5 <= deck size <= 100
+</p>
