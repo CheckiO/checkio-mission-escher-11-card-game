@@ -8,11 +8,12 @@ function cards(deck, hand) {
 var assert = require('assert');
 if (!global.is_checking) {
     console.log('Example:')
-    console.log(cards([5, [2, 0, 1, 2]]))
+    console.log(cards(5, [2, 0, 1, 2]))
 
     // These "asserts" are used for self-checking and not for an auto-testing
-    assert.equal(cards([5, [2, 0, 1, 2]]), false)
-    assert.equal(cards([10, [9, 9, 6, 6]]), true)
+    assert.equal(cards(5, [2, 0, 1, 2]), false)
+    assert.equal(cards(10, [9, 9, 6, 6]), true)
+    assert.equal(cards(10, [11]), false)
     console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }
 

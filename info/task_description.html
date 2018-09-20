@@ -1,6 +1,6 @@
 <!-- Describe task in general -->
 
-<img class="for_info_only half" src="{{MEDIA}}cards.png" style="float:left;max-height: 400px">
+<img class="for_info_only half" src="{{MEDIA}}cards.jpg" style="float:left;max-height: 400px">
 
 <div class="story for_info_only">
 It seems that the Hypercube affects this place in a very strange way - for example, it’s not letting the two spirits of treasure hunters to rest in peace until they figure out who between the two of them is a winner of some weird game. Hm, what would've happened if you’d refused to finish an already started game?..<br>
@@ -11,11 +11,15 @@ Nevertheless, you’ve had neither the time nor the inclination to think about t
 </div>
 
 <p>
-The numbers on the cards are written according to the following principle: the first card has  0 and 1, the second - 1 and 2, ..., the n-th - (n-1) and n. The cards in this set are shuffled chaotically.<br>
+In this mission will be used a special deck of double-sided cards which had the numbers written on them - one number per one side of the card. The numbers on the cards are written according to the following principle: the first card has  0 and 1, the second - 1 and 2, ..., the n-th - (n-1) and n. The cards in this set are shuffled chaotically.<br>
 <br>
 As input your function receives the total number of cards and a list of numbers which have been seen on the alternately taken N cards, noting that you are looking only at the front side of the card. Your task is to determine whether the cards that you’ve seen are a part of this set or the cards from some other deck have accidentally got mixed up. Depending on the answer, return True (if all the viewed cards can be encountered only within one deck) or False (if otherwise).
 
 </p>
+
+<div class="for_info_only" style="text-align: center">
+    <img src="{{MEDIA}}cards_example.jpg" style="max-height: 350px">
+</div>
 
 <!-- Explain input and output values -->
 <p>
@@ -34,13 +38,15 @@ As input your function receives the total number of cards and a list of numbers 
 </p>
 {% if interpreter.slug == "js-node" %}
 <pre class="brush: javascript">
-cards([5, [2, 0, 1, 2]]) == False
-cards([10, [9, 9, 6, 6]]) == True
+cards(5, [2, 0, 1, 2]) == false
+cards(10, [9, 9, 6, 6]) == true
+cards(10, [11]) == false
 </pre>
 {% else %}
 <pre class="brush: python">
-cards([5, [2, 0, 1, 2]]) == False
-cards([10, [9, 9, 6, 6]]) == True
+cards(5, [2, 0, 1, 2]) == False
+cards(10, [9, 9, 6, 6]) == True
+cards(10, [11]) == False
 </pre>
 {% endif %}
 </div>

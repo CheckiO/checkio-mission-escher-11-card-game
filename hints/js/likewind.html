@@ -1,0 +1,40 @@
+
+<body data-author="likewind">
+<div class="question-answer">
+    <div class="question">
+        How should I start to solve this mission?
+    </div>
+    <div class="answer">
+        You could start with the next checking: check that in the list of cards no more than 1 value from both edges. For example, if the amount of cards in the deck is 10, the first card is (0, 1) and the last one is (9, 10). So, if the there are more than one "0" or "10" in the list, you should return false.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        What other conditions need to be checked?
+    </div>
+    <div class="answer">
+You should generalize the next situation: for example, we have a deck consists of 20 cards and you see the next numbers [11, 11, 12, 12]. Let assume that first 11 is the part of card (10, 11), the second 11 is the part of (11, 12) and the first 12 is the part of the card (12, 13). So, the last 12 is the part of a card from the other deck and you also should return false.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Which situations also can show that there are an "excess" cards in the deck?
+    </div>
+    <div class="answer">
+Let's look to the next example: 5 cards in the deck, you see the numbers [3, 3, 4, 5]. It looks ok, but let's think: 
+one of the 3 is the part of (2, 3), another - (3, 4), and the number 4 is the part of (4, 5). So, the last number - 5, is also an "excess" card.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        What else did we not take into account?
+    </div>
+    <div class="answer">
+Don't forget about the top limit. For example, in the 50-cards deck we can't find either 100 or 70, nor 51, because the last card of this deck is (49, 50).
+    </div>
+</div>
+
+</body>

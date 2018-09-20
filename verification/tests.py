@@ -33,7 +33,27 @@ TESTS = {
             "answer": False
         },
         {
-            "input":[99, [2, 3, 5, 8, 13, 21, 114]],
+            "input":[99, [2, 3, 5, 8, 13, 21, 100]],
+            "answer": False
+        },
+        {
+            "input":[10, [9, 10, 10]],
+            "answer": False
+        },
+        {
+            "input":[42, [0, 4, 6, 42, 40, 40, 41]],
+            "answer": False
+        },
+        {
+            "input":[13, [1, 12]],
+            "answer": True
+        },
+        {
+            "input":[88, [25, 39, 1]],
+            "answer": True
+        },
+        {
+            "input":[76, [1, 14, 7, 77]],
             "answer": False
         }
 
