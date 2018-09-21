@@ -55,6 +55,10 @@ TESTS = {
         {
             "input":[76, [1, 14, 7, 77]],
             "answer": False
+        },
+        {
+            "input":[5, [2, 1, 2]],
+            "answer": True
         }
 
     ]
