@@ -154,6 +154,16 @@ TESTS = {
         {
             "input":[4, [0, 1, 2, 3, 4]],
             "answer": False
+        },
+
+        {
+            "input":[4, [1, 1, 2, 3, 3]],
+            "answer": False
+        },
+
+        {
+            "input":[10, [1, 1, 2, 3, 4, 5, 6, 7, 7]],
+            "answer": False
         }
 
     ]
