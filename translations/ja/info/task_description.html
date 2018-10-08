@@ -1,0 +1,85 @@
+<!-- Describe task in general -->
+
+<img class="for_info_only half" src="{{MEDIA}}cards.jpg" style="float:left;max-height: 400px">
+
+<div class="story for_info_only">
+ハイパーキューブの影響が大変奇妙な方法でこの場に及んでいるようです。
+例えば、
+奇妙なゲームの勝者が分かるまで二人のトレジャーハンターの魂が安息に至らないなど。
+ふうむ、もしあなたがすでに開始されているゲームの終了を拒んだ場合は何が起こるのでしょうか。<br>
+<br>
+それにもかかわらず、あなたはそれらについて考えることなく先へ進みました。
+数分もしない内にあなたは見たくなかった本物の最悪の幽霊に会ってしまいました!
+最近訪れた部屋に掛かっていた男の肖像画と似ていることからエッシャー卿自身と判断するのが妥当なようです。
+この島から何年もの間トレジャーハンターが帰って来なかった理由が明らかになって来ました。
+今や引き返すことはできません。
+あなたは彼の言う通りにするしかなさそうです。<br>
+<br>
+「虚偽の中から真実を告げられたものだけを通す!」
+彼があなたを見据えて最初に言った言葉でした。
+彼は床にある両面に数が書かれたカードの束を指さしました。
+恐らくこれらのカードも過去の訪問者の所持品だったようです。
+エッシャー卿は冒険者を試すのにそれを使うことに決めたのでしょうか?
+まあ今は関係の無いことです。
+先へ行くためにあなたは最初の数枚のカードが一組のカードに属しているか判断しなくてはなりません。
+</div>
+
+<p>
+このミッションでは両面に数字が書かれた特別なカードの束を使います。
+各面に一つの数字が書かれています。
+この数字は以下の決まりで書かれています: 最初のカードは 0 と 1, 二番目は 1 と 2 ... n番目は (n-1) と n。 これらのカードはよくシャッフルされています。<br> 
+<br>
+あなたの関数は入力として一組のカードの総数と数枚のカードを数のリストとして受け取ります。
+カードの片面の数字しか分からないことに注意して下さい。
+あなたの仕事はそれらのカードがすべて一組のカードの一部か、他のカードの組のものが偶然混じっているか判断することです。
+以上より True ( もし見えているカード全てがカード一組から取り出せる場合 )
+か False ( それ以外 ) が答となります。
+
+</p>
+
+<div class="for_info_only" style="text-align: center">
+    <img src="{{MEDIA}}cards_example.jpg" style="max-height: 350px">
+</div>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>入力: </strong> カード組の総数、選ばれたカードのリスト
+</p>
+
+<p>
+    <strong>出力: </strong> 真偽値 ( True か False )
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>例:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+cards(5, [2, 0, 1, 2]) == false
+cards(10, [9, 9, 6, 6]) == true
+cards(10, [11]) == false
+</pre>
+{% else %}
+<pre class="brush: python">
+cards(5, [2, 0, 1, 2]) == False
+cards(10, [9, 9, 6, 6]) == True
+cards(10, [11]) == False
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+    ゲームの分析。
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>事前条件</strong>:<br>
+    5 <= deck size <= 100
+</p>
