@@ -1,1 +1,4 @@
 *.pyc
+*.swp
+verification/__pycache__
+.gitignore
